@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아프리카 동물 메디컬센터 모바일</title>
+  <!-- 1. 초기화 -->
+  <link href="./css/reset.css" type="text/css" rel="stylesheet">
+
+  <!-- 2. 공통서식 (pc, mobile) -->
+  <link href="./css/base.css" type="text/css" rel="stylesheet">
+
+  <!-- 3. 공통 레이아웃 (layout) -->
+  <link href="./css/mlayout.css" type="text/css" rel="stylesheet">
+
+  <!-- 4. 메인콘텐츠 서식 -->
+  <link href="./css/mmain.css" type="text/css" rel="stylesheet">
+
+  <!-- 5. 스와이퍼 플러그인 css -->
+  <link href="./css/swiper.css" type="text/css" rel="stylesheet">
+
+  <!-- 6. 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- 7. 접두사 자동으로 붙여주는 스크립트 -->
+  <script src="./script/prefixfree.min.js"></script>
+
+  <!-- 8. 제이쿼리 라이브러리  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      const gnb = $('.gnb > li > a');
+
+      gnb.click(function(){ //메인메뉴 클릭시
+        //서브메뉴를 모두 숨기고
+        //$('.sub').hide();
+        //해당 서브메뉴 나오게 한다.
+        //$(this).next().show();
+
+        $(this).next().slideToggle();
+        $(this).find('i').toggleClass('on');
+
+        return false; //a태그의 #기능을 무력화 하여 새로고침 못하게 막는다.
+      });
+
+    });
+  </script>
+
+</head>
+<body>
+  <input type="checkbox" id="toggle">
+
+  <!-- 헤더영역 시작 -->
+  <header>
+    <h1>
+      <a href="mindex.html" title="메인페이지로 바로가기">
+        <img src="./mimages/logo.png" alt="상단로고">
+      </a>
+    </h1>
+
+    <label class="fas fa-bars" for="toggle"></label>
+
+    <nav class="navi">
+      <label class="fas fa-times" for="toggle"></label>
+      <ul class="gnb">
+        <li><a href="intro.html" title="병원소개">병원소개<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+          </ul>
+        </li>
+        <li><a href="care_info.html" title="진료안내">진료안내<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+          </ul>
+        </li>
+        <li><a href="health_info.html" title="질병안내">질병안내<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+          </ul>
+        </li>
+        <li><a href="ad_center.html" title="홍보센터">홍보센터<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+          </ul>
+        </li>
+        <li><a href="customer.html" title="고객지원">고객지원<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+          </ul>
+        </li>
+        <li><a href="community.html" title="커뮤니티">커뮤니티<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+            <li><a href="#" title="서브">sub</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="sns">
+        <li>
+          <a href="#" title="페이스북">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="인스타그램">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        </li>
+          <li>
+            <a href="#" title="트위터">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 메인영역 시작 -->
+  <main>
+    <article class="slide">
+      <h2>메인슬라이드</h2>
+      <div class="swiper-container myslide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#" title="">
+              <h3>쾌적한 환경<br> 넓은 시설</h3>
+            <img src="./mimages/slide01.jpg" alt="">
+          </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" title="">
+              <h3>언제나 열려있는<br> 24시 아프리카<br> 동물메디컬센터</h3>
+              <img src="./mimages/slide2.jpg" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" title="">
+              <h3>최실 시설장비<br>청결한 병원시설</h3>
+              <img src="./mimages/slide3.jpg" alt="">
+            </a>
+          </div>
+        </div>
+        <!-- 페이지 위치를 표시하기 위한 콘트롤 버튼 나오게 하기 -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+
+    <!-- 메인 내비게이션 서식 -->
+    <nav class="m_gnb">
+      <ul>
+        <li><a href="#" title="병원소개">
+          <span class="icon">&nbsp;</span>
+          <span class="m_txt">병원소개</span>
+        </a></li>
+        <li><a href="#" title="의료진소개">
+          <span class="icon">&nbsp;</span>
+          <span class="m_txt">의료진소개</span>
+        </a>
+        </li>
+        <li><a href="#" title="진료과목">
+          <span class="icon">&nbsp;</span>
+          <span class="m_txt">진료과목</span>
+        </a>
+        </li>
+        <li><a href="#" title="특화클리닉">
+          <span class="icon">&nbsp;</span>
+          <span class="m_txt">특화클리닉</span></a>
+        </li>
+        <li><a href="#" title="장비소개">
+          <span class="icon">&nbsp;</span>
+          <span class="m_txt">장비소개</span></a>
+        </li>
+        <li><a href="#" title="둘러보기">
+          <span class="icon">&nbsp;</span>
+          <span class="m_txt">둘러보기</span></a>
+        </li>
+        <li><a href="#" title="오시는 길">
+          <span class="icon">&nbsp;</span>
+          <span class="m_txt">오시는 길</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 지점정보 -->
+    <article class="info">
+      <h2>지점정보</h2>
+      <i class="fas fa-phone-alt">둔산점</i>
+      <p class="tel">
+        <a href="tel:02-0000-0000" title="전화">02-0000-0000</a>
+        &middot;
+        <a href="sms:02-0000-0000" title="문자">02-0000-0000</a>
+      </p>
+      <p>365일 24시 진료(국민연금공단)</p>
+    </article>
+  </main>
+
+  <footer>
+    <h2>
+      <a href="mindex.html" title="메인페이지로 바로가기">
+        <img src="./images/footer_logo.jpg" alt="하단로고">
+      </a>
+    </h2>
+
+    <a href="index.html?move_pc_screen=1" title="PC 버전보기" class="pc_btn">
+      PC 버전보기</a>
+    
+    <address>
+      <p>24아프리카동물메디컬센터 &#x007C; 대표:000 &#x007C; 사업자번호:000-00-00000</p>
+      <p>대표전화:042-486-7581 &#x007C;주소:000 000 00</p>
+      <p>Copyright&copy;2021 아프리카동물메디컬센터. All Rights Reserved.</p>
+    </address>
+  </footer>
+
+  <!-- 스와이퍼 스크립트 소스 -->
+  <script src="./script/swiper.js"></script>
+  <script>
+    var swiper = new Swiper('.myslide',{
+      spaceBetween:0,
+      effect:"fade", /* 페이드인 페이드아웃 슬라이드*/
+      centerSlide:true,
+      autoplay:{
+        delay:3000,
+        disableOnInteraction:false,
+      },
+      pagination:{
+        el:'.swiper-pagination',
+        clickable:true,
+      },
+    })
+  </script>
+</body>
+</html>
